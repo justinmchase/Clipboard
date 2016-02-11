@@ -366,6 +366,7 @@
       <ReservedName>Буфер обмена</ReservedName>
       <ReservedName>Zwischenablage</ReservedName>
       <ReservedName>Vágólap</ReservedName>
+      <ReservedName>AppuntiRT</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>

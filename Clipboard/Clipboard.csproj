@@ -12,14 +12,15 @@
     <DefaultLanguage>en</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Clipboard_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Clipboard_TemporaryKey.pfx</PackageCertificateKeyFile>
     <ExpressionBlendVersion>5.0.30514.0</ExpressionBlendVersion>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>bin\deploy\</AppxPackageDir>
-    <PackageCertificateThumbprint>471C1791D9513623E25E93360752A7E4B4D0B7CE</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>2F33754B6CA8B576FA87293152B0B82E431ECCD6</PackageCertificateThumbprint>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <TargetFrameworkVersion />
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -157,8 +158,6 @@
     </AppxManifest>
     <None Include="Assets\CodeplexLogo.pdn" />
     <None Include="Assets\SplashScreen.pdn" />
-    <None Include="Clipboard_StoreKey.pfx" />
-    <None Include="Clipboard_TemporaryKey.pfx" />
     <PRIResource Include="strings\it\resources.resw" />
     <PRIResource Include="strings\hu\resources.resw" />
     <PRIResource Include="strings\pl\resources.resw" />
@@ -178,6 +177,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\WideLogo.png" />
     <Content Include="Assets\contrast-white\WideLogo.png" />
+    <None Include="Clipboard_TemporaryKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="password.txt" />
     <Page Include="Views\About.xaml">

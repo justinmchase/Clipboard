@@ -1,0 +1,8 @@
+MainPackage=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_AnyCPU.appx
+SymbolPackage=E:\code\clipboard\Clipboard\bin\deploy\Clipboard_1.5.0.17_Test\Clipboard_1.5.0.17_AnyCPU.appxsym
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-de.appx
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-fr.appx
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-hu.appx
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-it.appx
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-pl.appx
+ResourcePack=E:\code\clipboard\Clipboard\bin\Release\Clipboard_1.5.0.17_language-ru.appx
