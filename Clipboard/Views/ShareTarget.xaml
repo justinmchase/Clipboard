@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="TaoOfLeo.Clipboard.Views.ShareTarget"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="using:TaoOfLeo.Clipboard.Views"
+    xmlns:common="using:TaoOfLeo.Clipboard.Common"
+    xmlns:vm="using:TaoOfLeo.Clipboard.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<d:Page.DataContext>
+		<vm:ShareTargetViewModel />
+	</d:Page.DataContext>
+
+    <Grid Style="{StaticResource LayoutRootStyle}">
+
+        <StackPanel x:Name="stackPanel"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBlock FontFamily="Segoe UI Symbol" Text="&#xE16D;" FontSize="128" TextAlignment="Center" />
+            <Button 
+                x:Name="button"
+                Click="Copy"
+                MinWidth="155"
+                HorizontalAlignment="Center"
+                BorderBrush="{StaticResource ApplicationForegroundThemeBrush}"                        
+                Background="{StaticResource HotThemeBrush}">
+                <TextBlock
+                    Text="{Binding Resources.Copy}"
+                    FontSize="36"
+                    TextWrapping="NoWrap" 
+                    TextTrimming="WordEllipsis" 
+                    FontFamily="Segoe UI"
+                    HorizontalAlignment="Center" />
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,15 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaoOfLeo.Clipboard.Views">
+
+	<Color x:Key="Anchor">#FF3C3C3C</Color>
+	<Color x:Key="LightAnchor">#FFCCCCCC</Color>
+	
+	<Color x:Key="Aoi">#FF69D2E7</Color>
+	<Color x:Key="CleanPondWater">#FFA7DBD8</Color>
+	<Color x:Key="BeachStorm">#FFE0E4CC</Color>
+	<Color x:Key="GiantGoldfish">#FFF38630</Color>
+	<Color x:Key="UnrealFoodPills">#FFFA6900</Color>
+
+</ResourceDictionary>

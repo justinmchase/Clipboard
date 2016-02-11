@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="11361JustinChase.Clipboard" Publisher="CN=0A0F6BF1-1DEA-4185-A47C-075328E69404" Version="1.5.0.13" />
+  <Properties>
+    <DisplayName>ms-resource:ApplicationTitle</DisplayName>
+    <PublisherDisplayName>Justin Chase</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TaoOfLeo.Clipboard.App">
+      <Extensions>
+        <Extension Category="windows.shareTarget">
+          <ShareTarget>
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+            <DataFormat>Text</DataFormat>
+            <DataFormat>URI</DataFormat>
+            <DataFormat>Bitmap</DataFormat>
+            <DataFormat>HTML</DataFormat>
+            <DataFormat>RTF</DataFormat>
+            <DataFormat>Shell IDList Array</DataFormat>
+          </ShareTarget>
+        </Extension>
+      </Extensions>
+      <m2:VisualElements DisplayName="ms-resource:ApplicationTitle" Description="ms-resource:ApplicationDescription" BackgroundColor="#FA6900" ForegroundText="light" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png">
+        <m2:DefaultTile ShortName="ms-resource:ApplicationTitle" Wide310x150Logo="Assets\WideLogo.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen BackgroundColor="#FA6900" Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+</Package>
