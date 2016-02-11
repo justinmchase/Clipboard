@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="11361JustinChase.Clipboard" Publisher="CN=0A0F6BF1-1DEA-4185-A47C-075328E69404" Version="1.5.0.13" />
+  <Identity Name="11361JustinChase.Clipboard" Publisher="CN=0A0F6BF1-1DEA-4185-A47C-075328E69404" Version="1.5.0.14" />
   <Properties>
     <DisplayName>ms-resource:ApplicationTitle</DisplayName>
     <PublisherDisplayName>Justin Chase</PublisherDisplayName>
