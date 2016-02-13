@@ -53,14 +53,14 @@ namespace TaoOfLeo.Clipboard.Views
 
 		private void OnSizeChanged(object sender, SizeChangedEventArgs e)
 		{
-			if (ApplicationView.Value.ToString() == "Snapped")
-			{
-				VisualStateManager.GoToState(_attached, "Snapped", false);
-			}
-			else
-			{
-				VisualStateManager.GoToState(_attached, "Filled", false);
-			}
+			//if (ApplicationView.Value.ToString() == "Snapped")
+			//{
+			//	VisualStateManager.GoToState(_attached, "Snapped", false);
+			//}
+			//else
+			//{
+			//	VisualStateManager.GoToState(_attached, "Filled", false);
+			//}
 		}
 	}
 }

@@ -49,9 +49,13 @@ namespace TaoOfLeo.Clipboard.Common
                     {
                         package.SetText((string)values[format]);
                     }
-                    else if (format == StandardDataFormats.Uri)
+                    else if (format == StandardDataFormats.WebLink)
                     {
-                        package.SetUri((Uri)values[format]);
+                        package.SetWebLink((Uri)values[format]);
+                    }
+                    else if (format == StandardDataFormats.ApplicationLink)
+                    {
+                        package.SetApplicationLink((Uri)values[format]);
                     }
                     else if (format == "extensions")
                     {
@@ -132,9 +136,16 @@ namespace TaoOfLeo.Clipboard.Common
                         var value = await view.GetTextAsync();
                         values.Add(format, value);
                     }
-                    else if (format == StandardDataFormats.Uri)
+                    else if (format == StandardDataFormats.ApplicationLink)
                     {
-                        var value = await view.GetUriAsync();
+                        var value = await view.GetApplicationLinkAsync();
+                        values.Add(format, value);
+                        if (!values.ContainsKey(StandardDataFormats.Text))
+                            values.Add(StandardDataFormats.Text, value.ToString());
+                    }
+                    else if (format == StandardDataFormats.WebLink)
+                    {
+                        var value = await view.GetWebLinkAsync();
                         values.Add(format, value);
 
                         if (!values.ContainsKey(StandardDataFormats.Text))

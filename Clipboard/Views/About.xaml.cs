@@ -43,7 +43,7 @@ namespace TaoOfLeo.Clipboard.Views
 
 		private async void hyperlinkButton_Click(object sender, RoutedEventArgs e)
 		{
-			var success = await Windows.System.Launcher.LaunchUriAsync(new Uri("http://winrtclipboard.codeplex.com/discussions"));
+			var success = await Windows.System.Launcher.LaunchUriAsync(new Uri("https://github.com/justinmchase/Clipboard/issues"));
 			if (!success)
 			{
 				(Window.Current.Content as Frame).Navigate(typeof(MainPage)); // unexpected error

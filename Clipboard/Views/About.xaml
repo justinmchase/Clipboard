@@ -108,7 +108,7 @@
                 Grid.ColumnSpan="2" 
                 HorizontalAlignment="Center" 
                 FontSize="24" 
-                Content="http://winrtclipboard.codeplex.com" 
+                Content="https://www.github.com/justinmchase/Clipboard" 
                 Click="hyperlinkButton_Click"/>
             
 			<TextBlock 

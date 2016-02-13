@@ -4,6 +4,7 @@ using TaoOfLeo.Clipboard.Common;
 using System.Linq;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.DataTransfer.ShareTarget;
+using System.Diagnostics;
 
 namespace TaoOfLeo.Clipboard.ViewModels
 {
@@ -20,8 +21,9 @@ namespace TaoOfLeo.Clipboard.ViewModels
         public async void Initialize(ShareOperation share)
         {
             _share = share;
-            share.ReportStarted();
-            await share.Data.CopyTo(_values);
+            _share.ReportStarted();
+            await _share.Data.CopyTo(_values);
+            _share.ReportDataRetrieved();
         }
 
         public void Copy()
@@ -30,19 +32,43 @@ namespace TaoOfLeo.Clipboard.ViewModels
 			{
                 if (_share.Data.Properties.ApplicationName != Constants.ApplicationName)
                 {
+                    _share.ReportSubmittedBackgroundTask();
+
                     var content = new DataPackage();
                     _values.CopyTo(content);
 
                     Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(content);
                     Windows.ApplicationModel.DataTransfer.Clipboard.Flush();
-                }
+                    Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged += OnClipboardContentChanged;
 
-                _share.ReportCompleted();
+                    _share.DismissUI();
+                }
+                else
+                {
+                    _share.ReportCompleted();
+                }
 			}
 			catch (Exception ex)
 			{
                 _share.ReportError(ex.Message);
             }
 		}
+
+        private void OnClipboardContentChanged(object sender, object e)
+        {
+            if (_share != null)
+            {
+                try
+                {
+                    _share.ReportCompleted();
+                    _share = null;
+                }
+                catch(Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    _share.ReportError(ex.ToString());
+                }
+            }
+        }
 	}
 }

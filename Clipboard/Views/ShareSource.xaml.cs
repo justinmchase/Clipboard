@@ -57,13 +57,13 @@ namespace TaoOfLeo.Clipboard.Views
         void OnSettingsCommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
         {
             args.Request.ApplicationCommands.Add(new SettingsCommand(
-                "about", 
-                this.viewModel.Resources.AboutTitle, 
+                "about",
+                this.viewModel.Resources.AboutTitle,
                 c => (Window.Current.Content as Frame).Navigate(typeof(About))));
 
             args.Request.ApplicationCommands.Add(new SettingsCommand(
-                "privacy", 
-                this.viewModel.Resources.PrivacyPolicyTitle, 
+                "privacy",
+                this.viewModel.Resources.PrivacyPolicyTitle,
                 c => (Window.Current.Content as Frame).Navigate(typeof(Privacy))));
 
             args.Request.ApplicationCommands.Add(new SettingsCommand(
@@ -99,14 +99,15 @@ namespace TaoOfLeo.Clipboard.Views
         private async void Share(object sender, RoutedEventArgs e)
         {
             await SetContent();
-            if (ApplicationView.Value != ApplicationViewState.Snapped)
-            {
-                DataTransferManager.ShowShareUI();
-            }
-            else if (ApplicationView.TryUnsnap())
-            {
-                await this.Dispatcher.RunIdleAsync(args => DataTransferManager.ShowShareUI());
-            }
+            DataTransferManager.ShowShareUI();
+
+            //if (ApplicationView.Value != ApplicationViewState.Snapped)
+            //{
+            //}
+            //else if (ApplicationView.TryUnsnap())
+            //{
+            //    await this.Dispatcher.RunIdleAsync(args => DataTransferManager.ShowShareUI());
+            //}
         }
 
         /// <summary>

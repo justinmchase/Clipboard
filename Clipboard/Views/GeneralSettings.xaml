@@ -108,7 +108,7 @@
 			</Grid.ColumnDefinitions>
 			<CheckBox x:Name="AutoShareCheckbox" IsChecked="{Binding AutoCopy, Mode=TwoWay}">
 				<CheckBox.Content>
-					<TextBlock Text="{Binding Resources.GeneralSettingsAutoShare}" />
+					<TextBlock Text="{Binding Resources.GeneralSettingsAutoShare}" TextWrapping="WrapWholeWords" />
 				</CheckBox.Content>
 			</CheckBox>
 		</Grid>

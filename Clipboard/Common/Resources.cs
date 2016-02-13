@@ -22,13 +22,13 @@ namespace TaoOfLeo.Clipboard.Common
 
         private Resources()
         {
-            ResourceManager.Current.DefaultContext.QualifierValues.MapChanged += OnMapChanged;
+            ResourceContext.GetForCurrentView().QualifierValues.MapChanged += OnMapChanged;
         }
 
         private static string GetString(Expression<Func<object>> property)
         {
             var name = ((MemberExpression)property.Body).Member.Name;
-            return ResourceManager.Current.MainResourceMap.GetValue("resources/" + name).ValueAsString;
+            return ResourceManager.Current.MainResourceMap.GetValue("resources/" + name, ResourceContext.GetForCurrentView()).ValueAsString;
         }
 
         private void OnMapChanged(IObservableMap<string, string> sender, IMapChangedEventArgs<string> @event)
